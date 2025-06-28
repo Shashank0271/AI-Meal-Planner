@@ -1,0 +1,359 @@
+@import "@radix-ui/themes/styles.css";
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  border: 0;
+  font-family: "Space-Grotesk", sans-serif;
+}
+
+/* Radix UI shadow utility classes */
+.radix-shadow-1 {
+  box-shadow: var(--shadow-1);
+}
+.radix-shadow-2 {
+  box-shadow: var(--shadow-2);
+}
+.radix-shadow-3 {
+  box-shadow: var(--shadow-3);
+}
+.radix-shadow-4 {
+  box-shadow: var(--shadow-4);
+}
+.radix-shadow-5 {
+  box-shadow: var(--shadow-5);
+}
+.radix-shadow-6 {
+  box-shadow: var(--shadow-6);
+}
+
+/* ------------------- ACCENT COLOR UTILITIES ------------------- */
+
+/* Backgrounds */
+.bg-accent-1 {
+  background-color: var(--accent-1);
+}
+.bg-accent-2 {
+  background-color: var(--accent-2);
+}
+
+/* Interactive components */
+.bg-accent-3 {
+  background-color: var(--accent-3);
+}
+.bg-accent-4 {
+  background-color: var(--accent-4);
+}
+.bg-accent-5 {
+  background-color: var(--accent-5);
+}
+
+/* Borders and separators */
+.bg-accent-6 {
+  background-color: var(--accent-6);
+}
+.bg-accent-7 {
+  background-color: var(--accent-7);
+}
+.bg-accent-8 {
+  background-color: var(--accent-8);
+}
+
+/* Solid colors */
+.bg-accent-9 {
+  background-color: var(--accent-9);
+}
+.bg-accent-10 {
+  background-color: var(--accent-10);
+}
+
+/* Accessible text */
+.bg-accent-11 {
+  background-color: var(--accent-11);
+}
+.bg-accent-12 {
+  background-color: var(--accent-12);
+}
+
+/* Functional colors */
+.bg-accent-surface {
+  background-color: var(--accent-surface);
+}
+.bg-accent-indicator {
+  background-color: var(--accent-indicator);
+}
+.bg-accent-track {
+  background-color: var(--accent-track);
+}
+.bg-accent-contrast {
+  background-color: var(--accent-contrast);
+}
+
+.text-accent-1 {
+  color: var(--accent-1);
+}
+.text-accent-2 {
+  color: var(--accent-2);
+}
+.text-accent-3 {
+  color: var(--accent-3);
+}
+.text-accent-4 {
+  color: var(--accent-4);
+}
+.text-accent-5 {
+  color: var(--accent-5);
+}
+.text-accent-6 {
+  color: var(--accent-6);
+}
+.text-accent-7 {
+  color: var(--accent-7);
+}
+.text-accent-8 {
+  color: var(--accent-8);
+}
+.text-accent-9 {
+  color: var(--accent-9);
+}
+.text-accent-10 {
+  color: var(--accent-10);
+}
+.text-accent-11 {
+  color: var(--accent-11);
+}
+.text-accent-12 {
+  color: var(--accent-12);
+}
+.text-accent-surface {
+  color: var(--accent-surface);
+}
+.text-accent-indicator {
+  color: var(--accent-indicator);
+}
+.text-accent-track {
+  color: var(--accent-track);
+}
+.text-accent-contrast {
+  color: var(--accent-contrast);
+}
+
+.border-accent-1 {
+  border-color: var(--accent-1);
+}
+.border-accent-2 {
+  border-color: var(--accent-2);
+}
+.border-accent-3 {
+  border-color: var(--accent-3);
+}
+.border-accent-4 {
+  border-color: var(--accent-4);
+}
+.border-accent-5 {
+  border-color: var(--accent-5);
+}
+.border-accent-6 {
+  border-color: var(--accent-6);
+}
+.border-accent-7 {
+  border-color: var(--accent-7);
+}
+.border-accent-8 {
+  border-color: var(--accent-8);
+}
+.border-accent-9 {
+  border-color: var(--accent-9);
+}
+.border-accent-10 {
+  border-color: var(--accent-10);
+}
+.border-accent-11 {
+  border-color: var(--accent-11);
+}
+.border-accent-12 {
+  border-color: var(--accent-12);
+}
+.border-accent-surface {
+  border-color: var(--accent-surface);
+}
+.border-accent-indicator {
+  border-color: var(--accent-indicator);
+}
+.border-accent-track {
+  border-color: var(--accent-track);
+}
+.border-accent-contrast {
+  border-color: var(--accent-contrast);
+}
+
+/* ------------------- GRAY COLOR UTILITIES ------------------- */
+
+/* Backgrounds */
+.bg-gray-1 {
+  background-color: var(--gray-1);
+}
+.bg-gray-2 {
+  background-color: var(--gray-2);
+}
+
+/* Interactive components */
+.bg-gray-3 {
+  background-color: var(--gray-3);
+}
+.bg-gray-4 {
+  background-color: var(--gray-4);
+}
+.bg-gray-5 {
+  background-color: var(--gray-5);
+}
+
+/* Borders and separators */
+.bg-gray-6 {
+  background-color: var(--gray-6);
+}
+.bg-gray-7 {
+  background-color: var(--gray-7);
+}
+.bg-gray-8 {
+  background-color: var(--gray-8);
+}
+
+/* Solid colors */
+.bg-gray-9 {
+  background-color: var(--gray-9);
+}
+.bg-gray-10 {
+  background-color: var(--gray-10);
+}
+
+/* Accessible text */
+.bg-gray-11 {
+  background-color: var(--gray-11);
+}
+.bg-gray-12 {
+  background-color: var(--gray-12);
+}
+
+/* Functional colors */
+.bg-gray-surface {
+  background-color: var(--gray-surface);
+}
+.bg-gray-indicator {
+  background-color: var(--gray-indicator);
+}
+.bg-gray-track {
+  background-color: var(--gray-track);
+}
+.bg-gray-contrast {
+  background-color: var(--gray-contrast);
+}
+
+.text-gray-1 {
+  color: var(--gray-1);
+}
+.text-gray-2 {
+  color: var(--gray-2);
+}
+.text-gray-3 {
+  color: var(--gray-3);
+}
+.text-gray-4 {
+  color: var(--gray-4);
+}
+.text-gray-5 {
+  color: var(--gray-5);
+}
+.text-gray-6 {
+  color: var(--gray-6);
+}
+.text-gray-7 {
+  color: var(--gray-7);
+}
+.text-gray-8 {
+  color: var(--gray-8);
+}
+.text-gray-9 {
+  color: var(--gray-9);
+}
+.text-gray-10 {
+  color: var(--gray-10);
+}
+.text-gray-11 {
+  color: var(--gray-11);
+}
+.text-gray-12 {
+  color: var(--gray-12);
+}
+.text-gray-surface {
+  color: var(--gray-surface);
+}
+.text-gray-indicator {
+  color: var(--gray-indicator);
+}
+.text-gray-track {
+  color: var(--gray-track);
+}
+.text-gray-contrast {
+  color: var(--gray-contrast);
+}
+
+.border-gray-1 {
+  border-color: var(--gray-1);
+}
+.border-gray-2 {
+  border-color: var(--gray-2);
+}
+.border-gray-3 {
+  border-color: var(--gray-3);
+}
+.border-gray-4 {
+  border-color: var(--gray-4);
+}
+.border-gray-5 {
+  border-color: var(--gray-5);
+}
+.border-gray-6 {
+  border-color: var(--gray-6);
+}
+.border-gray-7 {
+  border-color: var(--gray-7);
+}
+.border-gray-8 {
+  border-color: var(--gray-8);
+}
+.border-gray-9 {
+  border-color: var(--gray-9);
+}
+.border-gray-10 {
+  border-color: var(--gray-10);
+}
+.border-gray-11 {
+  border-color: var(--gray-11);
+}
+.border-gray-12 {
+  border-color: var(--gray-12);
+}
+.border-gray-surface {
+  border-color: var(--gray-surface);
+}
+.border-gray-indicator {
+  border-color: var(--gray-indicator);
+}
+.border-gray-track {
+  border-color: var(--gray-track);
+}
+.border-gray-contrast {
+  border-color: var(--gray-contrast);
+}
+
+/* Light mode: subtle dark shadow for text */
+.text-shadow-dark {
+  text-shadow: 0 2px 8px var(--gray-12, rgba(0, 0, 0, 0.25));
+}
+
+.text-shadow-theme {
+  text-shadow: 0 2px 8px var(--gray-9);
+}
+
