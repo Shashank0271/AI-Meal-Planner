@@ -1,6 +1,7 @@
 import { CoffeeOutlined } from "@ant-design/icons";
 import { Button, Flex, Link, Text } from "@radix-ui/themes";
 import ThemeToggle from "../atoms/ThemeToggle";
+import HamburgerMenu from "./HamburgerMenu";
 
 const AppHeader = () => {
   return (
@@ -12,17 +13,22 @@ const AppHeader = () => {
       className="gray-200 px-18 py-2 radix-shadow-3"
     >
       <CoffeeOutlined className="text-4xl rounded-md bg-green-500 p-2" />
-      <Flex direction="row" gap="4" align="center">
-        <Link href="#">Home</Link>
 
-        <Link href="#">Subscribe</Link>
+      <div className="flex flex-row items-center gap-4">
+        <div className="max-md:hidden flex flex-row gap-4 items-center">
+          <Link href="#">Home</Link>
 
-        <Button variant="solid">
-          <Text size={"3"}>Sign Up </Text>
-        </Button>
+          <Link href="#">Subscribe</Link>
 
+          <Button variant="solid">
+            <Text size={"3"}>Sign Up </Text>
+          </Button>
+        </div>
         <ThemeToggle />
-      </Flex>
+        <div className="md:hidden">
+          <HamburgerMenu />
+        </div>
+      </div>
     </Flex>
   );
 };

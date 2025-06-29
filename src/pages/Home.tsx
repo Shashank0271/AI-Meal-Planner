@@ -13,8 +13,8 @@ const Home = () => {
       width={"100%"}
     >
       <div
-        className={`w-[95%] sm:w-3/4 md:w-2/3 lg:w-1/2 rounded-2xl shadow-xl border border-accent-8
-          backdrop-blur-md flex flex-col gap-6 text-center items-center py-9 px-4 
+        className={`w-[90%] md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-2xl shadow-xl border border-accent-8
+          backdrop-blur-md flex flex-col gap-6 text-center items-center py-9 px-8 
           ${isDark ? "opacity-100" : "opacity-70"}`}
         style={{
           background:
@@ -33,7 +33,7 @@ const Home = () => {
       </div>
 
       {/* giving the section a height of 100% was taking up all the space , squishing the card */}
-      <Section size={"1"}>
+      <Section size={{ sm: "2", xs: "4" }}>
         <Flex
           direction={"column"}
           justify={"center"}

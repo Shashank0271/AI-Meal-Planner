@@ -1,7 +1,7 @@
 import { Flex, Theme } from "@radix-ui/themes";
 import type { ReactNode } from "react";
-import AppHeader from "../molecules/AppHeader";
 import { useTheme } from "../../contexts/Theme/ThemeContext";
+import AppHeader from "../molecules/AppHeader";
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   const { isDark } = useTheme();
