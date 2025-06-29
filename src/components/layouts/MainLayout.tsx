@@ -25,7 +25,10 @@ export default function MainLayout({ children }: { children: ReactNode }) {
           }}
         >
           <AppHeader />
-          <Flex style={{ flex: 1, paddingTop: 24 }} direction={"column"}>
+          <Flex
+            style={{ flex: 1, paddingTop: 24, paddingBottom: 8}}
+            direction={"column"}
+          >
             {children}
           </Flex>
         </Flex>

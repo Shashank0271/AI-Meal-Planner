@@ -3,10 +3,12 @@ import { Button, Flex, Text, Link } from "@radix-ui/themes";
 import ThemeToggle from "../atoms/ThemeToggle";
 import HamburgerMenu from "./HamburgerMenu";
 import { useLocation } from "wouter";
-import { useAuth } from "@clerk/clerk-react";
+import { useAuth, useUser } from "@clerk/clerk-react";
 
 const AppHeader = () => {
   const [, navigate] = useLocation();
+  const { user } = useUser();
+  console.log(user);
   const { isSignedIn, signOut } = useAuth();
   return (
     <Flex
@@ -21,7 +23,7 @@ const AppHeader = () => {
       <div className="flex flex-row items-center gap-4">
         <div className="max-md:hidden flex flex-row gap-4 items-center">
           <Link href="/home">Home</Link>
-          <Link href="#">Subscribe</Link>
+          <Link href="/subscribe">Subscribe</Link>
           <Button
             variant="solid"
             style={{ cursor: "pointer" }}

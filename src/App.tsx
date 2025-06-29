@@ -3,6 +3,7 @@ import MainLayout from "./components/layouts/MainLayout";
 import { ThemeProvider } from "./contexts/Theme/ThemeContext";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
+import Subscribe from "./pages/Subscribe";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           </Route>
           <Route path={"/home"} component={Home} />
           <Route path={"/signup"} component={SignUp} />
+          <Route path={"/subscribe"} component={Subscribe} />
         </Switch>
       </MainLayout>
     </ThemeProvider>
