@@ -11,10 +11,8 @@ function App() {
           <Route path={"/"}>
             <Redirect to="/home" />
           </Route>
-
           <Route path={"/home"} component={Home}></Route>
         </Switch>
-        <Home />
       </MainLayout>
     </ThemeProvider>
   );
