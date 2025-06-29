@@ -1,5 +1,5 @@
 import { Button, Card, Flex, Heading, Section, Text } from "@radix-ui/themes";
-import OnboardingCard from "../components/OnboardingCard";
+import OnboardingCard from "../components/molecules/OnboardingCard";
 import { CheckIcon, GearIcon, PersonIcon } from "@radix-ui/react-icons";
 import { useTheme } from "../contexts/Theme/ThemeContext";
 
