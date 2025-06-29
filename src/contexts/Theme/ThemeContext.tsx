@@ -1,11 +1,11 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
-type ThemeContextType = {
+interface ThemeContextType {
   isDark: boolean;
   toggleTheme: () => void;
-};
+}
 
-const ThemeContext = createContext<ThemeContextType | null>({
+const ThemeContext = createContext<ThemeContextType>({
   isDark: false,
   toggleTheme: () => {},
 });
@@ -13,10 +13,19 @@ const ThemeContext = createContext<ThemeContextType | null>({
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  // this is supposed to hold the state / sync it with api calls and
-  // inject those variables into the children
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    const stored = localStorage.getItem("isDark");
+    return stored ? JSON.parse(stored) : false;
+  });
+
+  // Sync theme changes to localStorage
+  useEffect(() => {
+    localStorage.setItem("isDark", JSON.stringify(isDark));
+  }, [isDark]);
+
+  // Toggle and sync
   const toggleTheme = () => setIsDark((prev) => !prev);
+
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       {children}
@@ -24,10 +33,4 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return context;
-};
+export const useTheme = () => useContext(ThemeContext);

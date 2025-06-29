@@ -17,7 +17,6 @@ const HamburgerMenu: React.FC = () => {
         </IconButton>
       </DropdownMenu.Trigger>
       <DropdownMenu.Content>
-        {/* <DropdownMenu.Item>Sign Up</DropdownMenu.Item> */}
         <StyledDropdownMenuItem icon={<PersonIcon />} label="Sign Up" />
         <DropdownMenu.Separator />
         <StyledDropdownMenuItem

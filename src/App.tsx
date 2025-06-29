@@ -2,6 +2,7 @@ import { Redirect, Route, Switch } from "wouter";
 import MainLayout from "./components/layouts/MainLayout";
 import { ThemeProvider } from "./contexts/Theme/ThemeContext";
 import Home from "./pages/Home";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
           <Route path={"/"}>
             <Redirect to="/home" />
           </Route>
-          <Route path={"/home"} component={Home}></Route>
+          <Route path={"/home"} component={Home} />
+          <Route path={"/signup"} component={SignUp} />
         </Switch>
       </MainLayout>
     </ThemeProvider>

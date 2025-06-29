@@ -5,6 +5,7 @@ import { useTheme } from "../contexts/Theme/ThemeContext";
 
 const Home = () => {
   const { isDark } = useTheme();
+  console.log(isDark);
   return (
     <Flex
       direction={"column"}

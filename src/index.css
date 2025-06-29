@@ -1,6 +1,11 @@
 @import "@radix-ui/themes/styles.css";
 @import "tailwindcss";
 
+/* In your index.css or global styles */
+.theme-transition {
+  transition: background-color 0.4s, color 0.4s;
+}
+
 html,
 body {
   margin: 0;
@@ -356,4 +361,3 @@ body {
 .text-shadow-theme {
   text-shadow: 0 2px 8px var(--gray-9);
 }
-
