@@ -1,6 +1,6 @@
 import { Flex, Theme } from "@radix-ui/themes";
 import type { ReactNode } from "react";
-import AppHeader from "../AppHeader";
+import AppHeader from "../molecules/AppHeader";
 import { useTheme } from "../../contexts/Theme/ThemeContext";
 
 export default function MainLayout({ children }: { children: ReactNode }) {

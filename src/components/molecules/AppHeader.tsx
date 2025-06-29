@@ -1,6 +1,6 @@
 import { CoffeeOutlined } from "@ant-design/icons";
 import { Button, Flex, Link, Text } from "@radix-ui/themes";
-import ThemeToggle from "./atoms/ThemeToggle";
+import ThemeToggle from "../atoms/ThemeToggle";
 
 const AppHeader = () => {
   return (
