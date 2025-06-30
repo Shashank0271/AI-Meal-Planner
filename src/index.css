@@ -1,10 +1,10 @@
 @import "@radix-ui/themes/styles.css";
 @import "tailwindcss";
 
-/* In your index.css or global styles */
-.theme-transition {
-  transition: background-color 0.4s, color 0.4s;
-}
+/* .cl-pricingTableCard {
+  height: 0;
+  width: 0;
+} */
 
 html,
 body {

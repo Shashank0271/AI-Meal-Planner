@@ -4,12 +4,31 @@ import { useTheme } from "../../contexts/Theme/ThemeContext";
 import AppHeader from "../molecules/AppHeader";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { clerkPublishableKey } from "../../environmentVariables";
+import { dark, experimental__simple } from "@clerk/themes";
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   const { isDark } = useTheme();
   return (
     // wrap all the providers here at top level to create a singleton like pattern
-    <ClerkProvider publishableKey={clerkPublishableKey} afterSignOutUrl={"/"}>
+    <ClerkProvider
+      publishableKey={clerkPublishableKey}
+      afterSignOutUrl={"/"}
+      appearance={{
+        pricingTable: {
+          baseTheme: isDark ? dark : experimental__simple,
+          variables: { colorPrimary: "#31AA70" },
+          elements: {
+            pricingTableCard: {
+              marginInline: 24,
+            },
+          },
+        },
+        signIn: {
+          baseTheme: isDark ? dark : experimental__simple,
+          variables: { colorPrimary: "#31AA70" },
+        },
+      }}
+    >
       <Theme
         accentColor="green"
         grayColor="slate"
@@ -26,7 +45,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
         >
           <AppHeader />
           <Flex
-            style={{ flex: 1, paddingTop: 24, paddingBottom: 8}}
+            style={{ flex: 1, paddingTop: 24, paddingBottom: 8 }}
             direction={"column"}
           >
             {children}

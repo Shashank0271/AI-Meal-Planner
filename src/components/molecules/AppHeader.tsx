@@ -3,13 +3,12 @@ import { Button, Flex, Text, Link } from "@radix-ui/themes";
 import ThemeToggle from "../atoms/ThemeToggle";
 import HamburgerMenu from "./HamburgerMenu";
 import { useLocation } from "wouter";
-import { useAuth, useUser } from "@clerk/clerk-react";
+import { useAuth } from "@clerk/clerk-react";
 
 const AppHeader = () => {
   const [, navigate] = useLocation();
-  const { user } = useUser();
-  console.log(user);
-  const { isSignedIn, signOut } = useAuth();
+  const { isSignedIn, signOut, has } = useAuth();
+  // console.log(has ? has({ plan: "5_dollar_plan" }) : undefined);
   return (
     <Flex
       direction="row"
