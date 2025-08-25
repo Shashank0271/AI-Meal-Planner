@@ -25,7 +25,8 @@ const Home = () => {
           Personalized AI Meal Plans
         </Heading>
         <Text className="text-shadow-lg text-accent-contrast font-bold text-white">
-          Let our AI do the planning . You focus on cooking and enjoying !
+          Let our AI do the planning . You focus on cooking and{" "}
+          <span className="whitespace-nowrap">enjoying !</span>
         </Text>
         <Button style={{ backgroundColor: "var(--accent-10)" }}>
           Get started

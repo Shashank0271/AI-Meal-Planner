@@ -1,6 +1,5 @@
 @import "@radix-ui/themes/styles.css";
 @import "tailwindcss";
-
 /* .cl-pricingTableCard {
   height: 0;
   width: 0;
@@ -361,3 +360,5 @@ body {
 .text-shadow-theme {
   text-shadow: 0 2px 8px var(--gray-9);
 }
+
+
